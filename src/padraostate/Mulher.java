@@ -2,21 +2,33 @@ package padraostate;
 
 public class Mulher {
 
-    private Estado estado_atual;
+    private Estado estadoAtual;
 
     public Mulher() {
-        this.estado_atual = new EstadoIndisposta();
+        this.estadoAtual = new EstadoIndisposta();
     }
 
-    public void alterar_estado(Estado novo_estado) {
-        this.estado_atual = novo_estado;
+    public void alterarEstado(Estado novoEstado) {
+        this.estadoAtual = novoEstado;
     }
 
-    public void interagir(String acao) {
-        this.estado_atual.interagir(this, acao);
+    public void elogiar() {
+        this.estadoAtual.elogiar(this);
+    }
+
+    public void falarBobagem() {
+        this.estadoAtual.falarBobagem(this);
+    }
+
+    public void convidarParaSair() {
+        this.estadoAtual.convidarParaSair(this);
+    }
+
+    public void cancelarPrograma() {
+        this.estadoAtual.cancelarPrograma(this);
     }
 
     public String getNomeEstadoAtual() {
-        return this.estado_atual.getClass().getSimpleName();
+        return this.estadoAtual.getClass().getSimpleName().replace("Estado", "");
     }
 }

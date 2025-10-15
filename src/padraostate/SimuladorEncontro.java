@@ -12,11 +12,10 @@ public class SimuladorEncontro {
         System.out.println("Objetivo: Mudar o estado da pessoa de 'Indisposta' para 'Exitada'.\n");
 
         while (true) {
-            System.out.println("\n[Estado Atual: " + mulher.getNomeEstadoAtual().replace("Estado", "") + "]");
-
+            System.out.println("\n[Estado Atual: " + mulher.getNomeEstadoAtual() + "]");
             System.out.println("Escolha sua ação:");
             System.out.println("1 - Elogiar");
-            System.out.println("2 - Falar Bobagem");
+            System.out.println("2 - Contar piada");
             System.out.println("3 - Convidar para Sair");
             System.out.println("4 - Cancelar Programa (Cuidado!)");
             System.out.println("5 - Sair do Programa");
@@ -30,38 +29,31 @@ public class SimuladorEncontro {
                 continue;
             }
 
-            String acao = "";
-            boolean sair = false;
-
-            switch (escolha) {
-                case 1:
-                    acao = "Elogiar";
-                    break;
-                case 2:
-                    acao = "FalarBobagem";
-                    break;
-                case 3:
-                    acao = "ConvidarParaSair";
-                    break;
-                case 4:
-                    acao = "CancelarPrograma";
-                    break;
-                case 5:
-                    sair = true;
-                    break;
-                default:
-                    System.out.println(">> Ação inválida. Tente novamente.");
-                    continue;
-            }
-
-            if (sair) {
-                System.out.println("--- Fim da Simulação ---");
+            if (escolha == 5) {
                 break;
             }
 
-            mulher.interagir(acao);
+            // O switch agora chama métodos diretamente, sem usar Strings!
+            switch (escolha) {
+                case 1:
+                    mulher.elogiar();
+                    break;
+                case 2:
+                    mulher.falarBobagem();
+                    break;
+                case 3:
+                    mulher.convidarParaSair();
+                    break;
+                case 4:
+                    mulher.cancelarPrograma();
+                    break;
+                default:
+                    System.out.println(">> Ação inválida. Tente novamente.");
+                    break;
+            }
         }
 
+        System.out.println("\n--- Fim da Simulação ---");
         scanner.close();
     }
 }

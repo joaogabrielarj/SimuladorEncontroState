@@ -1,5 +1,8 @@
 package padraostate;
 
 public interface Estado {
-    void interagir(Mulher mulher, String acao);
+    void elogiar(Mulher mulher);
+    void falarBobagem(Mulher mulher);
+    void convidarParaSair(Mulher mulher);
+    void cancelarPrograma(Mulher mulher);
 }
