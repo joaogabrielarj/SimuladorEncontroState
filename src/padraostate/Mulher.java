@@ -16,8 +16,8 @@ public class Mulher {
         this.estadoAtual.elogiar(this);
     }
 
-    public void falarBobagem() {
-        this.estadoAtual.falarBobagem(this);
+    public void contarPiada() {
+        this.estadoAtual.contarPiada(this);
     }
 
     public void convidarParaSair() {

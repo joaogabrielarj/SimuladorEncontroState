@@ -8,7 +8,7 @@ public class EstadoInteressada implements Estado {
     }
 
     @Override
-    public void falarBobagem(Mulher mulher) {
+    public void contarPiada(Mulher mulher) {
         System.out.println(">> Resposta: Poxa, que pena... achei que você era diferente. (O estado regrediu para: Indisposta)");
         mulher.alterarEstado(new EstadoIndisposta());
     }

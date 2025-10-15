@@ -8,7 +8,7 @@ public class EstadoExitada implements Estado {
     }
 
     @Override
-    public void falarBobagem(Mulher mulher) {
+    public void contarPiada(Mulher mulher) {
         System.out.println(">> Resposta: Hahaha, você é uma figura!");
     }
 

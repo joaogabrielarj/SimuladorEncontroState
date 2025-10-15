@@ -9,7 +9,7 @@ public class EstadoIndisposta implements Estado {
     }
 
     @Override
-    public void falarBobagem(Mulher mulher) {
+    public void contarPiada(Mulher mulher) {
         System.out.println(">> Resposta: ... (silêncio total)");
     }
 

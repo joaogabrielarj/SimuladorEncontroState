@@ -33,13 +33,13 @@ public class SimuladorEncontro {
                 break;
             }
 
-            // O switch agora chama métodos diretamente, sem usar Strings!
+
             switch (escolha) {
                 case 1:
                     mulher.elogiar();
                     break;
                 case 2:
-                    mulher.falarBobagem();
+                    mulher.contarPiada();
                     break;
                 case 3:
                     mulher.convidarParaSair();
